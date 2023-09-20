@@ -1,0 +1,12 @@
+div.explain-box{
+    position: absolute;
+    bottom: 10vh;
+    background-color: rgb(216, 198, 255);
+    width: 80vw;
+    height: 25vh;
+    opacity: 0.5;
+}
+
+p#explain-txt{
+
+}
