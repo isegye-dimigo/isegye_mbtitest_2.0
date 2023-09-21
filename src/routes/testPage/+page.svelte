@@ -1,24 +1,10 @@
 <script lang="ts">
-import { goto } from "$app/navigation";
+    import { goto } from "$app/navigation";
     import Explainbox from "$lib/components/explainbox.svelte";
+    import { scenario } from "$lib/scenario/identify";
     let buttonValue = -1;
-    const scenario = [
-        {
-            id:1,
-            text:'test1',
-            isButtonAppear:false,
-        },
-        {
-            id:2,
-            text:'test2',
-            isButtonAppear: true,
-            button1: '11',
-            button2: '22',
-        },
-    ]
-
     const handleButtonEvent = (event)=>{
-        console.log(event.detail);
+        console.log(event);
         buttonValue = event.detail;
         if(buttonValue === 1){
             goto('/testPage/specialTest');

@@ -5,8 +5,26 @@ div.explain-box{
     width: 80vw;
     height: 25vh;
     opacity: 0.5;
+    animation: boxFadeUp 1s linear;
+    text-align: center;
 }
 
-p#explain-txt{
+@keyframes boxFadeUp {
+    from{
+        transform: translateY(10%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
 
+@keyframes pageConvert {
+    from{
+        transform: scale(0%);
+    }
+    to{
+        transform: scale(50%);
+    }
 }

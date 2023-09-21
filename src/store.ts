@@ -1,0 +1,1 @@
+export const mbtiData = [0,0,0,0];
