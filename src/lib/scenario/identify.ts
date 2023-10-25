@@ -1,14 +1,12 @@
 export const scenario = [
     {
-        id:1,
-        text:'test1',
+        text:'소년을 구하시겠습니까?',
         isButtonAppear:false,
     },
     {
-        id:2,
-        text:'test2',
+        text:'소년을 구하시겠습니까?',
         isButtonAppear: true,
-        button1: '11',
-        button2: '22',
+        button1: '구한다',
+        button2: '모른척하고 지나간다',
     },
 ]
