@@ -1,6 +1,20 @@
 <script>
     import { goto } from "$app/navigation";
+    import { onMount } from "svelte";
     let visitorNum = 0;
+    onMount(
+        async function getVisitorNum(){
+            const response = await fetch("/api/visitorCnt",{
+                method: 'POST',
+                headers:{
+                    'content-type': 'application/json'
+                },
+                credentials: 'include'
+            });
+            const data = await response.json();
+            visitorNum = data.count
+        }
+    )
 </script>
 
 <h1 id="main-text">이세계 성격테스트</h1>

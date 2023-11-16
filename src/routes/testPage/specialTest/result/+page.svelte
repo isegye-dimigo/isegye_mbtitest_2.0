@@ -1,11 +1,11 @@
 <script lang="ts">
     import { goto } from "$app/navigation";
     import SnsShare from "$lib/components/snsShare.svelte";
-    import { mbtiString } from "../../../../store";
+    import { mbtiString,mbtiCharacters } from "../../../../store";
     import { onMount } from "svelte";
     let resultShareCode:string;
     onMount(
-        async function getVisitorNum() {
+        async function saveMbtiString() {
             if($mbtiString.length === 4){
                 const response = await fetch("/api/saveInfo", {
                             method: 'POST',
@@ -28,8 +28,8 @@
     }
 </script>
 
-<h1>result page</h1>
-<h1>{$mbtiString}</h1>
+<h1>당신이 이세계에 간다면?</h1>
+<h1>{mbtiCharacters[$mbtiString].name}</h1>
 <button on:click={()=>{goto('/')}}>다시하기</button>
 <button on:click={()=>{copyShareLink();}}>링크복사</button>
 <SnsShare/>

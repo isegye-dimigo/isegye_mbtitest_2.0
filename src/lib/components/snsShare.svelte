@@ -1,7 +1,3 @@
-
-
-<button on:click={()=>{snsShareBtn()}}>SNS공유</button>
-
 <script lang="ts">
 
     const snsShareBtn = async () =>{
@@ -17,3 +13,5 @@
         }
     }
 </script>
+
+<button on:click={()=>{snsShareBtn()}}>SNS공유</button>
