@@ -22,7 +22,7 @@ div.button-container{
     align-items: center;
 }
 
-div.button-container>button{
+div.button-container>button.selectBtn{
     padding: 1%;
     border: 0;
     width: 90%;
@@ -49,13 +49,10 @@ div#next{
 
 
 @media(hover: hover) and (pointer: fine) {
-    button:hover{
-        border: dashed 1px white;
-    }
-    button:hover::before{
+    button.selectBtn:hover::before{
         content: '▷';
     }
-    button:active::before{
+    button.selectBtn:active::before{
         content: '▶';
     }
 }

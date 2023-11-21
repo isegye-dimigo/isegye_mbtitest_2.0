@@ -24,7 +24,8 @@
             );
 </script>
 
-<h1>이세계에서 빠져나오는 중...</h1>
+
+<p>이세계에서 빠져나오는 중...</p>
 <div class="loading"><div></div><div></div></div>
 
 
