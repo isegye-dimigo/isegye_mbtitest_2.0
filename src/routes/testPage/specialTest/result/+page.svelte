@@ -25,26 +25,29 @@
 </script>
 
 
-<p>이세계에서 빠져나오는 중...</p>
-<div class="loading"><div></div><div></div></div>
+<p id="loading-message">이세계에서 돌아오는 중 입니다...</p>
+<div id="loading"><div></div><div></div></div>
 
 
 <style>
     @import '../../../../lib/style/global.css';
-    .loading {
+    p#loading-message{
+        position: absolute;
+    }
+    #loading {
         display: inline-block;
-        position: relative;
+        position: absolute;
         width: 80px;
         height: 80px;
     }
-    .loading div {
+    #loading div {
         position: absolute;
         border: 4px solid #fff;
         opacity: 1;
         border-radius: 50%;
         animation: loading 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
     }
-    .loading div:nth-child(2) {
+    #loading div:nth-child(2) {
         animation-delay: -0.5s;
     }
     @keyframes loading {

@@ -34,21 +34,21 @@
 
     const getMbtiType = (questionNum:number):number => {
         switch(questionNum){
-            case 1://e
-            case 2:
-            case 3:
-                return 0;
-            case 4://n
-            case 5:
+            case 5://e
             case 6:
+            case 7:
+                return 0;
+            case 1://n
+            case 2:
+            case 4://미정
                 return 1;
-            case 7://t
-            case 8:
+            case 3://t
             case 9:
+            case 12://미정
                 return 2;
-            case 10://j
+            case 8://j
+            case 10:
             case 11:
-            case 12:
                 return 3;
             default:
                 return -1;

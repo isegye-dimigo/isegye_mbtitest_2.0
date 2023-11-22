@@ -32,9 +32,19 @@
 {#if characterName != 'loading...'}
 <h1>당신이 이세계에 간다면?</h1>
 <h1>{characterName}</h1>
-<button on:click={()=>{goto('/')}}>다시하기</button>
-<button on:click={()=>{copyShareLink();}}>링크복사</button>
-<SnsShare identifyCode = {curIdentifyCode}/>
+<div id="button-container">
+    <button on:click={()=>{goto('/')}}>다시하기</button>
+    <button on:click={()=>{copyShareLink();}}>링크복사</button>
+    <SnsShare identifyCode = {curIdentifyCode}/>
+</div>
 {:else}
 <p>데이터 불러오는중..</p>
 {/if}
+
+<style>
+    div#button-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+</style>
