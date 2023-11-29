@@ -40,11 +40,11 @@
                 return 0;
             case 1://n
             case 2:
-            case 12://미정
+            case 12:
                 return 1;
             case 3://t
             case 9:
-            case 4://미정
+            case 4:
                 return 2;
             case 8://j
             case 10:
@@ -72,12 +72,12 @@
                 mbtiData[getMbtiType(questionNum)]-=2;
                 break;
         }
-        if(boxIdx<23){
-            boxIdx++;
-        }else{
+        if(boxIdx === scenario.length-1){
             console.log(mbtiData);
             culMbtiString(mbtiData);
             goto('/testPage/specialTest/result');
+        }else{
+            boxIdx++;
         }
         if(event.detail != 0 && questionNum < 12){
             questionNum++;
@@ -91,7 +91,7 @@
 </div>
 {#if boxIdx%2 == 1}
 <Explainbox2 explainData = {scenario[boxIdx]} on:buttonClick = {(event)=>{handleButtonEvent(event)}}/>
-{:else if boxIdx%2 == 0 && boxIdx<25}
+{:else if boxIdx%2 == 0 && boxIdx<scenario.length}
 <Explainbox2 explainData = {scenario[boxIdx]} on:buttonClick = {(event)=>{handleButtonEvent(event)}}/>
 {/if}
 
