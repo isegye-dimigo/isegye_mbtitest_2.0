@@ -40,11 +40,11 @@
                 return 0;
             case 1://n
             case 2:
-            case 4://미정
+            case 12://미정
                 return 1;
             case 3://t
             case 9:
-            case 12://미정
+            case 4://미정
                 return 2;
             case 8://j
             case 10:
