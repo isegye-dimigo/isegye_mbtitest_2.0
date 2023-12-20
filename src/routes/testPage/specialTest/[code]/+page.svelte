@@ -18,11 +18,13 @@
                 }),
                 credentials: 'include'
             });
-            const data= await response.json();
-            mbtiString.set(data.mbti);
-            characterName = mbtiCharacters[data.mbti].name;
+            const fetchdata= await response.json();
+            mbtiString.set(fetchdata.mbti);
+            console.log(mbtiString);
+            characterName = mbtiCharacters[fetchdata.mbti].name;
         }
     );
+    console.log(mbtiString);
     const copyShareLink = ()=>{
         navigator.clipboard.writeText(`localhost:5173/testPage/specialTest/${curIdentifyCode}`);
         alert("공유 링크가 클립보드에 복사되었습니다!");
@@ -30,8 +32,21 @@
 </script>
 
 {#if characterName != 'loading...'}
-<h1>당신이 이세계에 간다면?</h1>
-<h1>{characterName}</h1>
+<h1>내가 이세계에 간다면?</h1>
+<div class="container">
+    <h1>{characterName}</h1>
+    <h3>{mbtiCharacters[$mbtiString].mbtiFeature[0]}</h3>
+    <img src="{mbtiCharacters[$mbtiString].imageRoute}" alt="">
+    <div class="container">
+        <ul>
+            {#each mbtiCharacters[$mbtiString].mbtiFeature as feature}
+            {#if feature[0] !== '\"'}
+            <li>{feature}</li>
+            {/if}
+            {/each}
+        </ul>
+    </div>
+</div>
 <div id="button-container">
     <button on:click={()=>{goto('/')}}>다시하기</button>
     <button on:click={()=>{copyShareLink();}}>링크복사</button>
@@ -46,5 +61,25 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        background-color: white;
+    }
+    div.container{
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+    img{
+        width: 40%;
+    }
+    button{
+        width: 4vw;
+        height: 4vw;
+        border-radius: 1rem;
+        background-color: black;
+        color: white;
+        margin: 1rem;
     }
 </style>

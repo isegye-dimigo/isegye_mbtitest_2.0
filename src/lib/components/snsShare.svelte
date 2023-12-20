@@ -15,3 +15,14 @@
 </script>
 
 <button on:click={()=>{snsShareBtn()}}>sns공유</button>
+
+<style>
+    button{
+        width: 4vw;
+        height: 4vw;
+        border-radius: 1rem;
+        background-color: black;
+        color: white;
+        margin: 1rem;
+    }
+</style>

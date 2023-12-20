@@ -86,8 +86,7 @@
 </script>
 
 <div class:fadeIn={boxIdx == 0 ? 'fadeIn' : ''}>
-    <h1 class:fadeIn={boxIdx == 0 ? 'fadeIn' : ''}>component zone</h1>
-    <p class:fadeIn={boxIdx == 0 ? 'fadeIn' : ''}>{questionNum}</p>
+    <img src="/img/scenarioImg/{questionNum}.png" alt="">
 </div>
 {#if boxIdx%2 == 1}
 <Explainbox2 explainData = {scenario[boxIdx]} on:buttonClick = {(event)=>{handleButtonEvent(event)}}/>
@@ -96,6 +95,9 @@
 {/if}
 
 <style>
+    body{
+        overflow: hidden;
+    }
     @keyframes convertEffect{
         from{
             filter: blur(1rem);
@@ -106,6 +108,9 @@
     }
     .fadeIn{
         animation: convertEffect 2s;
-        background-color: aqua;
+    }
+    img{
+        width: 100vw;
+        
     }
 </style>

@@ -6,7 +6,7 @@ export const scenario = [
         button2: '갑자기 구하고 싶어요. 구할래요!',
     },
     {
-        text:'위험에 처한 소년을 외면한 당신은 죄책감에 자살하셨습니다.',
+        text:'마음이 약해진 당신, 당신은 결국 소년을 구해주게 되었습니다.',
         isButtonAppear: false,
     },
 ]
