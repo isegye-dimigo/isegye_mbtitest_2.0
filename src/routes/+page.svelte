@@ -1,9 +1,13 @@
 <script>
     import { goto } from "$app/navigation";
     import { onMount } from "svelte";
+    import { mbtiString } from "../store";
     let visitorNum = 0;
+    if($mbtiString.length === 4){
+        location.reload();
+    }
     onMount(
-        async function getVisitorNum(){
+    async function getVisitorNum(){
             const response = await fetch("/api/visitorCnt",{
                 method: 'POST',
                 headers:{
@@ -12,8 +16,9 @@
                 credentials: 'include'
             });
             const data = await response.json();
-            visitorNum = data.count
+            visitorNum = data.count;
         }
+        
     )
 </script>
 
@@ -24,6 +29,8 @@
     <h1 id="main-text">테스트 시작하기</h1> 
     <p>{visitorNum}명이 이세계에 다녀왔어요</p>
 </button>
+<p class="caution">!씹덕주의!</p>
+<p class="caution">모바일 환경은 권장하지 않습니다.</p>
 <p id="footer">@isegae</p>
 
 <style>
@@ -60,5 +67,8 @@
         img#main-img{
             width: 50%;
         }
+    }
+    p.caution{
+        font-size: 0.8rem;
     }
 </style>

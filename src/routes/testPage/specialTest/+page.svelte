@@ -95,9 +95,6 @@
 {/if}
 
 <style>
-    body{
-        overflow: hidden;
-    }
     @keyframes convertEffect{
         from{
             filter: blur(1rem);
@@ -111,6 +108,5 @@
     }
     img{
         width: 100vw;
-        
     }
 </style>

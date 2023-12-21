@@ -1,6 +1,7 @@
 <script lang="ts">
     import { goto } from "$app/navigation";
     import Explainbox from "$lib/components/explainbox.svelte";
+    import GoIsegye from "$lib/components/goIsegye.svelte";
     import { scenario } from "$lib/scenario/normal";
     let buttonValue = -1;
     let questionIdx = 0;
@@ -16,6 +17,7 @@
         }
     }
 </script>
+<GoIsegye/>
 
 <div>일반인</div>
 

@@ -3,6 +3,7 @@
     import { goto } from '$app/navigation';
     import SnsShare from '$lib/components/snsShare.svelte';
     import { onMount } from 'svelte';
+    import { characterArr } from '../../../../store.js';
     export let data;
     const curIdentifyCode = data.code;
     let characterName:string='loading...';
@@ -20,19 +21,16 @@
             });
             const fetchdata= await response.json();
             mbtiString.set(fetchdata.mbti);
-            console.log(mbtiString);
             characterName = mbtiCharacters[fetchdata.mbti].name;
         }
     );
-    console.log(mbtiString);
     const copyShareLink = ()=>{
         navigator.clipboard.writeText(`localhost:5173/testPage/specialTest/${curIdentifyCode}`);
         alert("공유 링크가 클립보드에 복사되었습니다!");
     }
 </script>
-
 {#if characterName != 'loading...'}
-<h1>내가 이세계에 간다면?</h1>
+<h1 id="title">내가 이세계에 간다면?</h1>
 <div class="container">
     <h1>{characterName}</h1>
     <h3>{mbtiCharacters[$mbtiString].mbtiFeature[0]}</h3>
@@ -46,6 +44,10 @@
             {/each}
         </ul>
     </div>
+    <div id="relationship">
+        <p>잘 맞는 캐릭터:{characterArr[mbtiCharacters[$mbtiString].relationship[0]]}</p>
+        <p>안 맞는 캐릭터:{characterArr[mbtiCharacters[$mbtiString].relationship[1]]}</p>
+    </div>
 </div>
 <div id="button-container">
     <button on:click={()=>{goto('/')}}>다시하기</button>
@@ -56,7 +58,16 @@
 <p>데이터 불러오는중..</p>
 {/if}
 
+
 <style>
+    :global(.main-container){
+        overflow: auto;
+    }
+
+    h1#title{
+        margin-top: 10vh;
+    }
+
     div#button-container{
         display: flex;
         flex-direction: row;
@@ -72,7 +83,7 @@
         padding: 2rem;
     }
     img{
-        width: 40%;
+        width: 30vw;
     }
     button{
         width: 4vw;

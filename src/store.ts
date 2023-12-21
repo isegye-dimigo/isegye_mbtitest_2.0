@@ -3,23 +3,30 @@ export const mbtiData = [0,0,0,0];
 export let mbtiString:Writable<string> = writable("");
 
 /*
-기사-istj 0
-마왕-estj 1
-마법사-intj 2
-귀족-entj 3
-예언자-infj 4
-상인-enfj 5
-힐러-isfj 6 
-교황-esfj 7
-엘프-infp 8
-용사-enfp 9
-성직자-isfp 10
-성녀-esfp 11
-마녀-intp 12
-왕-entp 13
-암살자-istp 14
-궁수-estp 15
+개선사항
+선택지 일부 조정
+뒤로가기 만들기
+이미지 안띄워지는거 개선
+
+기사-istj 0 그림체 이상ㅡㅡ
+마왕-estj 1 완
+마법사-intj 2 완
+귀족-entj 3 완
+예언자-infj 4 완
+상인-enfj 5 완
+힐러-isfj 6 완
+교황-esfj 7 완
+엘프-infp 8 완
+용사-enfp 9 그림체 이상ㅡㅡ
+성직자-isfp 10 완
+성녀-esfp 11 완(그림체 애매)
+마녀-intp 12 완
+왕-entp 13 완
+암살자-istp 14 완
+궁수-estp 15 완
 */
+
+export const characterArr:string[] = ['기사','마왕','마법사','귀족','예언자','상인','힐러','교황','엘프','용사','성직자','성녀','마녀','왕','암살자','궁수'];
 
 export const mbtiCharacters: Record<string, {name:string,mbtiFeature:string[],relationship:number[],imageRoute:string}> = {
     'istj': {
@@ -32,7 +39,7 @@ export const mbtiCharacters: Record<string, {name:string,mbtiFeature:string[],re
             '안정된 환경과 질서를 찾아 이세계에서도 안정을 유지하려 노력합니다.',
         ],
         relationship:[9,2],
-        imageRoute:"/img/istj",
+        imageRoute:"/img/characterImg/istj.png",
     },
     'estj': {
         name:"마왕",
@@ -44,7 +51,7 @@ export const mbtiCharacters: Record<string, {name:string,mbtiFeature:string[],re
             '강인한 리더십으로 마왕국가를 대표하며 결단력 있게 행동합니다.',
         ],
         relationship:[10,6],
-        imageRoute:"/img/estj",
+        imageRoute:"/img/characterImg/estj.png",
     },
     'intj': {
         name:"마법사",
@@ -56,7 +63,7 @@ export const mbtiCharacters: Record<string, {name:string,mbtiFeature:string[],re
             '지식의 깊이와 통찰력을 통해 이세계의 미지의 영역을 탐험합니다.',
         ],
         relationship:[11,7],
-        imageRoute:"/img/intj",
+        imageRoute:"/img/characterImg/intj.png",
     },
     'entj': {
         name:"귀족",
@@ -68,7 +75,7 @@ export const mbtiCharacters: Record<string, {name:string,mbtiFeature:string[],re
             '나의 리더십 하에 왕국은 더 크고 강력해지며 귀족과 국민들은 번영할 것이다!',
         ],
         relationship:[10,6],
-        imageRoute:"/img/entj",
+        imageRoute:"/img/characterImg/entj.png",
     },
     'infj': {
         name:"예언자",
@@ -80,7 +87,7 @@ export const mbtiCharacters: Record<string, {name:string,mbtiFeature:string[],re
             '감정적으로 타인을 이해하며, 예언을 통해 주변에 희망과 조화를 전파합니다.',
         ],
         relationship:[15,1],
-        imageRoute:"/img/infj",
+        imageRoute:"/img/characterImg/infj.png",
     },
     'enfj': {
         name:"상인",
@@ -92,7 +99,7 @@ export const mbtiCharacters: Record<string, {name:string,mbtiFeature:string[],re
             '상인의 긍정적인 에너지로 주변 사람들에게 희망과 경제적 번영을 전파합니다.',
         ],
         relationship:[14,6],
-        imageRoute:"/img/enfj",
+        imageRoute:"/img/characterImg/enfj.png",
     },
     'isfj': {
         name:"힐러",
@@ -104,7 +111,7 @@ export const mbtiCharacters: Record<string, {name:string,mbtiFeature:string[],re
             ' 힐러는 사회적 연대를 통해 이세계에서도 건강하고 행복한 사회를 만들려 합니다.',
         ],
         relationship:[13,3],
-        imageRoute:"/img/isfj",
+        imageRoute:"/img/characterImg/isfj.png",
     },
     'esfj': {
         name:"교황",
@@ -116,7 +123,7 @@ export const mbtiCharacters: Record<string, {name:string,mbtiFeature:string[],re
             '교황은 커뮤니티 통합을 도모하며, 사람들 간의 연대와 화합을 촉진합니다.',
         ],
         relationship:[12,2],
-        imageRoute:"/img/esfj",
+        imageRoute:"/img/characterImg/esfj.png",
     },
     'infp': {
         name:"엘프",
@@ -128,7 +135,7 @@ export const mbtiCharacters: Record<string, {name:string,mbtiFeature:string[],re
             '평화를 지향하며, 분쟁을 피하고 이웃들과 조화롭게 살기를 원합니다.',
         ],
         relationship:[1,12],
-        imageRoute:"/img/infp",
+        imageRoute:"/img/characterImg/infp.png",
     },
     'enfp': {
         name:"용사",
@@ -140,7 +147,7 @@ export const mbtiCharacters: Record<string, {name:string,mbtiFeature:string[],re
             '자유로운 영혼을 가지고 모험을 통해 새로운 경험을 쌓고 세계를 탐험합니다.',
         ],
         relationship:[0,14],
-        imageRoute:"/img/enfp",
+        imageRoute:"/img/characterImg/enfp.png",
     },
     'isfp': {
         name:"성직자",
@@ -152,7 +159,7 @@ export const mbtiCharacters: Record<string, {name:string,mbtiFeature:string[],re
             '신앙에 기반한 창조적인 활동을 통해 이세계에서의 평화를 실현하려 합니다.',
         ],
         relationship:[3,13],
-        imageRoute:"/img/isfp.png",
+        imageRoute:"/img/characterImg/isfp.png",
     },
     'esfp': {
         name:"성녀",
@@ -164,7 +171,7 @@ export const mbtiCharacters: Record<string, {name:string,mbtiFeature:string[],re
             '낙천적인 에너지로 주변 사람들에게 희망과 긍정적인 기운을 전파합니다.',
         ],
         relationship:[2,12],
-        imageRoute:"/img/esfp",
+        imageRoute:"/img/characterImg/esfp.png",
     },
     'intp': {
         name:"마녀",
@@ -176,7 +183,7 @@ export const mbtiCharacters: Record<string, {name:string,mbtiFeature:string[],re
             '자연과 환경을 소중히 여기며, 마법을 통해 이세계의 균형을 지키려 합니다.',
         ],
         relationship:[7,11],
-        imageRoute:"/img/intp",
+        imageRoute:"/img/characterImg/intp.png",
     },
     'entp': {
         name:"왕",
@@ -188,7 +195,7 @@ export const mbtiCharacters: Record<string, {name:string,mbtiFeature:string[],re
             '예술과 문화를 후원하여 왕국의 문화적인 발전을 촉진합니다.',
         ],
         relationship:[6,10],
-        imageRoute:"/img/entp",
+        imageRoute:"/img/characterImg/entp.png",
     },
     'istp': {
         name:"암살자",
@@ -200,7 +207,7 @@ export const mbtiCharacters: Record<string, {name:string,mbtiFeature:string[],re
             '독립적인 성향으로 혼자서도 임무를 완수하고 이세계의 안전을 위해 노력합니다.',
         ],
         relationship:[5,9],
-        imageRoute:"/img/istp",
+        imageRoute:"/img/characterImg/istp.png",
     },
     'estp': {
         name:"궁수",
@@ -212,6 +219,6 @@ export const mbtiCharacters: Record<string, {name:string,mbtiFeature:string[],re
             '도전과 위험을 두려워하지 않고, 어려운 상황에서도 뛰어난 전투 기술을 펼칩니다.  ',
         ],
         relationship:[4,8],
-        imageRoute:"/img/estp",
+        imageRoute:"/img/characterImg/estp.png",
     },
 };

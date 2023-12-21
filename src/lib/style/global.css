@@ -11,10 +11,19 @@
     padding: 0;
     color: white;
 }
+:global(body){
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    -moz-user-select: none;
+    user-select: none;
+}
 
 
 .main-container{
     background-color: black;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;

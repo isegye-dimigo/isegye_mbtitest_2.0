@@ -8,7 +8,7 @@ div.explain-box{
     bottom: 10vh;
     width: 80vw;
     height: 25vh;
-    animation: boxFadeUp 1s linear;
+    animation: boxFadeUp 1s linear forwards;
     text-align: center;
     border: solid 1px white;
 }
@@ -43,7 +43,7 @@ div#next{
     }
     to{
         transform: translateY(0%);
-        opacity: 1;
+        opacity: 0.7;
     }
 }
 
