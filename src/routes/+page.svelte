@@ -29,9 +29,8 @@
     <h1 id="main-text">테스트 시작하기</h1> 
     <p>{visitorNum}명이 이세계에 다녀왔어요</p>
 </button>
-<p class="caution">!씹덕주의!</p>
-<p class="caution">모바일 환경은 권장하지 않습니다.</p>
-<p id="footer">@isegae</p>
+<p class="caution">⚠️서브컬처 요소 다수 포함⚠️</p>
+<p id="footer">@isegye</p>
 
 <style>
     @font-face {

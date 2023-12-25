@@ -33,6 +33,7 @@
 <h1 id="title">내가 이세계에 간다면?</h1>
 <div class="container">
     <h1>{characterName}</h1>
+    <!-- <p></p> -->
     <h3>{mbtiCharacters[$mbtiString].mbtiFeature[0]}</h3>
     <img src="{mbtiCharacters[$mbtiString].imageRoute}" alt="">
     <div class="container">
